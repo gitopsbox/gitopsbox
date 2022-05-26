@@ -9,8 +9,8 @@ All products are chosen to be open-source and production-ready. This means they 
 Tested on
 
 - pfSense 2.5-2.6
-- Proxmox 6-7
-- Gitlab 14
+- Proxmox 6, 7.2-3
+- Gitlab 14, 15
 - Ubuntu Minimal 20.04LTS 22.04LTS
 
 ## Gitlab
