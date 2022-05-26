@@ -4426,14 +4426,14 @@ sudo kubectl --kubeconfig=/etc/rancher/k3s/k3s.yaml wait --timeout=120s --for=co
 sudo apt-get -o DPkg::Lock::Timeout=600 update
 sleep 10
 curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
-sudo apt -o DPkg::Lock::Timeout=600 install -y apt-transport-https
+sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=600 install -y apt-transport-https
 echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 sudo apt-get -o DPkg::Lock::Timeout=600 update
-sudo apt-get -o DPkg::Lock::Timeout=600 install -y helm
+sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=600 install -y helm
 sudo apt-get -o DPkg::Lock::Timeout=600 update
-sudo apt-get -o DPkg::Lock::Timeout=600 install -y acpid
+sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=600 install -y acpid
 sudo apt-get -o DPkg::Lock::Timeout=600 update
-sudo apt-get -o DPkg::Lock::Timeout=600 install -y docker.io
+sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=600 install -y docker.io
 sudo apt-get -o DPkg::Lock::Timeout=600 upgrade
 sudo cp --no-preserve=all /etc/rancher/k3s/k3s.yaml ~/k3s.yaml
 
